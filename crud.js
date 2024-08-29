@@ -6,7 +6,6 @@ const controllers = require('./controllers');
 router.post('/register', controllers.register);
 router.post('/login', controllers.login);
 
-// Protected CRUD Routes
 router.post('/users', controllers.protect, controllers.createUser);
 router.get('/users', controllers.protect, controllers.getAllUsers);
 router.get('/users/:id', controllers.protect, controllers.getUserById);
